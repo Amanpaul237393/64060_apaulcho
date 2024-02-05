@@ -1,0 +1,59 @@
+---
+title: "FML"
+author: "Aman"
+date: "2024-01-31"
+output:
+  html_document: default
+  pdf_document: default
+---
+## Executive summary - This dataset is about Electronic cards transection details which consist of the time period and Data value.
+#Loading the dataset by assigning the variable name as Electroniic_cards
+```{r}
+Electronic_cards <- read.csv("C:/Users/amanp/OneDrive/Desktop/electronic-card-transactions-december-2023-csv-tables.csv")
+Electronic_cards
+
+```
+
+## Performing descriptive statistics of quantitative and categorical variables.
+```{r}
+summary(Electronic_cards)
+```
+#Performing Summary analysis for Quantative variable
+```{r}
+summary(Electronic_cards$Data_value)
+```
+#Performing Summary analysis for categorical variable
+```{r}
+summary(Electronic_cards$UNITS)
+```
+
+```{r}
+head(Electronic_cards)
+```
+
+```{r}
+dim(Electronic_cards)
+```
+```{r}
+str(Electronic_cards)
+```
+```{r}
+class(Electronic_cards)
+```
+
+
+## Transforming the data in logical format 
+```{r}
+as.logical(Electronic_cards$Data_value)
+```
+
+## Plotting scatter plot for Data value and Period
+```{r}
+plot(Electronic_cards$Data_value, Electronic_cards$Period)
+```
+
+```{r}
+## Plotting Histogram for Period
+hist(Electronic_cards$Period)
+```
+
